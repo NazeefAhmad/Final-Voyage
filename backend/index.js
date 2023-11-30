@@ -13,7 +13,7 @@ dotenv.config()
 const app = express()
 const port = process.env.PORT || 8000
 const corsOptions = {
-    origin: 'https://voyage-travels.onrender.com/',
+    origin: 'https://voyage-api-1sme.onrender.com',
     credentials: true
 }
 

@@ -30,7 +30,7 @@ export default function ProfilePage() {
     // Fetch booking history when the component mounts
     const fetchBookingHistory = async () => {
       try {
-        const response = await fetch("https://voyage-travels.onrender.com/api/v1/booking"); // Replace with your actual backend API endpoint
+        const response = await fetch("https://voyage-api-1sme.onrender.com/api/v1/booking"); // Replace with your actual backend API endpoint
         if (response.ok) {
           const data = await response.json();
           setBookingHistory(data); // Assuming the response is an array of booking history
