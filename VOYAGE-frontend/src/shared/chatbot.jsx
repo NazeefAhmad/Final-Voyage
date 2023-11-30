@@ -8,7 +8,7 @@ import {
   MessageInput,
   TypingIndicator,
 } from '@chatscope/chat-ui-kit-react';
-const API_KEY = "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";
+const API_KEY = "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";
 const systemMessage = {
   //  Explain things like you're talking to a software professional with 5 years of experience.
   role: "system",
@@ -99,7 +99,7 @@ const ChatbotComponent = () => {
       <div
         style={{
           position: "relative",
-          height: "400px",
+          height: "700px",
           width: "500px",
         }}
       >
@@ -108,7 +108,7 @@ const ChatbotComponent = () => {
             <MessageList
               typingIndicator={
                 isTyping ? (
-                  <TypingIndicator content="ChatBot is Typing.." />
+                  <TypingIndicator content="thinking.." />
                 ) : null
               }
             >
@@ -117,7 +117,7 @@ const ChatbotComponent = () => {
               })}
             </MessageList>
             <MessageInput
-              placeholder="Type Your message Here!!"
+              placeholder="What is on your Mind ??"
               onSend={handleSend}
             />
           </ChatContainer>

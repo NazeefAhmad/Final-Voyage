@@ -133,6 +133,7 @@
     /* width: 15px;
     height: 15px; */
     z-index: 999; /* Ensure it's above other elements */
+    transition: ease-in-out 0.2s;
 }
 
 .chatbot-btn {
@@ -147,9 +148,14 @@
     outline: none;
     display: flex;
     align-items: center;
-
     justify-content: center;
     }
+
+.chatbot-container :hover {
+    background-color: #ffffff;
+    color: var(--secondary-color);
+    transition: 0.3s;
+}
 
 /* =============== RESPONSIVE ================ */
 @media only screen and (max-width:992px) {

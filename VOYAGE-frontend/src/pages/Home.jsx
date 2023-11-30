@@ -167,9 +167,11 @@ const Home = () => {
       <div className="chatbot-container">
         <button className="chatbot-btn" onClick={toggleChat}>
           {isChatOpen ? (
-            <ImCross width="50px" height="85px" />
+            <img src="https://img.icons8.com/ios-filled/50/000000/robot-2.png" />
+            // <ImCross width="50px" height="85px" />
           ) : (
-            <GrRobot width="50px" height="85px" />
+            // <GrRobot width="50px" height="85px" />
+            <img src="https://img.icons8.com/ios-filled/50/000000/robot-2.png" />
           )}
         </button>
         {isChatOpen && <ChatbotComponent />}
