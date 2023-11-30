@@ -4,12 +4,23 @@ import { Col, Form, FormGroup } from 'reactstrap'
 import { BASE_URL } from '../utils/config'
 import { useNavigate } from 'react-router-dom'
 
+
+
 const SearchBar = () => {
    const locationRef = useRef('')
    const maxGroupSizeRef = useRef(0)
    const navigate = useNavigate()
-
-   const searchHandler = async(e) => {
+   
+   const openMetro = () => {
+    var urlToOpen = 'https://www.delhimetrorail.com/map';
+    window.open(urlToOpen, '_blank');
+    }
+    const openEcab = () => {
+        var urlToOpen = 'https://blu-smart.com/';
+        window.open(urlToOpen, '_blank');
+    }
+   
+    const searchHandler = async(e) => {
       e.preventDefault();
       const location = locationRef.current.value
       const maxGroupSize = maxGroupSizeRef.current.value
@@ -44,6 +55,7 @@ const SearchBar = () => {
                   <input type="number" placeholder='Distance k/m' ref={distanceRef} />
                </div>
             </FormGroup> */}
+            
             <FormGroup className='d-flex gap-3 form__group form__group-last'>
                <span><i class='ri-group-line'></i></span>
                <div>
@@ -55,9 +67,15 @@ const SearchBar = () => {
             <span className='search__icon' type='submit' onClick={searchHandler}>
                <i class='ri-search-line'></i>
             </span>
+            
          </Form>
+         
       </div>
+    <input className='map-btn' value="DMRC" type='submit' onClick={openMetro} />
+    <input className='map-btn' value="E-Cabs" type='submit' onClick={openEcab} />
+    <input className='places-btn' value="Ecological Parks Near Me" type='submit' onClick={openEcab} />
    </Col>
+   
 }
 
 export default SearchBar
