@@ -19,6 +19,11 @@ const SearchBar = () => {
         var urlToOpen = 'https://blu-smart.com/';
         window.open(urlToOpen, '_blank');
     }
+
+    const openEtravel = () => {
+        var urlToOpen = 'https://so.city/delhi/article/6-gloriously-green-spaces-youll-prolly-refuse-to-believe-are-in-delhi ';
+        window.open(urlToOpen, '_blank');
+    }
    
     const searchHandler = async(e) => {
       e.preventDefault();
@@ -73,7 +78,7 @@ const SearchBar = () => {
       </div>
     <input className='map-btn' value="DMRC" type='submit' onClick={openMetro} />
     <input className='map-btn' value="E-Cabs" type='submit' onClick={openEcab} />
-    <input className='places-btn' value="Ecological Parks Near Me" type='submit' onClick={openEcab} />
+    <input className='places-btn' value="Ecological Parks Near Me" type='submit' onClick={openEtravel} />
    </Col>
    
 }
